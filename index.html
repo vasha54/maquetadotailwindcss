@@ -28,22 +28,38 @@
   <!--Inicio del panel de derecha -->
   <div class= "flex w-full h-screen basis-full sm:w-1/2 sm:float-right">
       <div class="w-full my-0 mr-0 sm:w-max sm:my-auto sm:mr-8">
-        <div class="flex items-center justify-center min-h-full px-8 py-12 bg-white">
+        <div class="flex items-center justify-center w-full min-h-full px-8 py-12 bg-white sm:w-form ">
           <div class="w-full max-w-md space-y-8"><div>
-            <h4 class="mt-6 text-2xl font-bold tracking-tight text-left text-gray-900">Crear cuenta</h4>
+            <h4 class="mt-6 text-xl font-bold tracking-tight text-left text-gray-900">Crear cuenta</h4>
               <p class="mt-2 text-sm text-left text-gray-600">
                 El Área privada de STATE es exclusiva para afilación y estudiantes adheridos.
               </p>
           </div>
-          <form class="relative w-full" action="#" method="POST">
+          <form class="relative w-full " action="#" method="POST">
               <!--Inicio de los campos del formulario-->
-              <div class="h-32">
-                <div>
-                  <input id="password" 
-                          name="password" 
-                          type="text" autocomplete="current-password" 
-                          required class="relative block w-full py-2 pr-3 text-gray-900 placeholder-gray-400 border-b-2 appearance-none border-b-gray-500 focus:z-10 focus:border-red-500 focus:outline-none focus:ring-red-500 sm:text-sm" 
+              <div class="my-20 ">
+                <div class="mb-2">
+                  <div class="flex items-center mb-1 text-red-500">
+                    <svg class="w-4 h-4 mr-1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                      <path fill-rule="evenodd" d="M10 1a4.5 4.5 0 00-4.5 4.5V9H5a2 2 0 00-2 2v6a2 2 0 002 2h10a2 2 0 002-2v-6a2 2 0 00-2-2h-.5V5.5A4.5 4.5 0 0010 1zm3 8V5.5a3 3 0 10-6 0V9h6z" clip-rule="evenodd" />
+                    </svg>
+                    <label for="remember-me" class="block text-sm">Datos de acceso incorrectos</a></label>
+                  </div>
+                  <input id="token" 
+                          name="token" 
+                          type="text" autocomplete="current-token" 
+                          required class="relative block w-full pr-3 text-gray-900 placeholder-gray-400 border-b appearance-none border-b-gray-400 focus:z-10 focus:border-red-400 focus:outline-none sm:text-sm" 
                           placeholder="Introduce tu NIF, NIE o Pasaporte">
+                </div>
+                <div class="flex items-center">
+                  <input id="remember-me" name="remember-me" type="checkbox" class="w-4 h-4 border-gray-300 rounded">
+                  <label for="remember-me" class="block ml-2 text-sm text-gray-900">Acepta la política de <a class="text-green-400">protección de datos</a></label>
+                </div>
+                <div class="flex items-center mt-1 text-red-500">
+                  <svg class="w-4 h-4 mr-1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                    <path fill-rule="evenodd" d="M10 1a4.5 4.5 0 00-4.5 4.5V9H5a2 2 0 00-2 2v6a2 2 0 002 2h10a2 2 0 002-2v-6a2 2 0 00-2-2h-.5V5.5A4.5 4.5 0 0010 1zm3 8V5.5a3 3 0 10-6 0V9h6z" clip-rule="evenodd" />
+                  </svg>
+                  <label for="remember-me" class="block text-sm text-red-500">Debe aceptar la política de protección de datos</a></label>
                 </div>
               </div>
               <!--Fin de los campos del formulario-->
@@ -51,12 +67,12 @@
             
                 <div class="relative items-center justify-between pb-12">
                   <div class="w-full sm:w-fit sm:absolute sm:inset-y-0 sm:right-0 ">
-                    <button type="submit" class="flex justify-center w-full px-5 py-2 text-xs font-bold text-white bg-green-500 border border-transparent rounded-full ">
+                    <a href="html/send_code_verification.html" class="flex justify-center w-full px-5 py-2 text-xs font-bold text-white bg-green-500 border border-transparent rounded-full ">
                         Continuar
-                    </button>
+                    </a>
                   </div>
-                  <div class="w-full h-full sm:w-fit sm:absolute sm:inset-y-0 sm:left-0">
-                    <a href="html/login.html" class="flex justify-center w-full py-3 text-xs font-bold text-green-500 bg-white">
+                  <div class="flex items-center justify-center w-full h-full mt-1 sm:-mt-2 sm:w-fit sm:absolute sm:inset-y-0 sm:left-0">
+                    <a href="html/login.html" class="flex justify-center py-3 text-xs font-bold text-green-500 bg-white w-fit">
                       Ya creé una cuenta, gracias.
                     </a>
                   </div>
@@ -113,9 +129,7 @@ Recortes de codigo
         <button type="submit" class="relative flex justify-center w-full px-4 py-2 text-sm font-medium text-white bg-indigo-600 border border-transparent rounded-md group hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2">
           <span class="absolute inset-y-0 left-0 flex items-center pl-3">
             
-            <svg class="w-5 h-5 text-indigo-500 group-hover:text-indigo-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-              <path fill-rule="evenodd" d="M10 1a4.5 4.5 0 00-4.5 4.5V9H5a2 2 0 00-2 2v6a2 2 0 002 2h10a2 2 0 002-2v-6a2 2 0 00-2-2h-.5V5.5A4.5 4.5 0 0010 1zm3 8V5.5a3 3 0 10-6 0V9h6z" clip-rule="evenodd" />
-            </svg>
+            
           </span>
           Sign in
         </button>
